@@ -13,9 +13,9 @@ import java.awt.Robot;
 import java.awt.AWTException;
 import java.awt.event.KeyEvent;
  
-class BotComment {
+public class BotComment {
  
-    //arreglo de teclas para escribir "HOLA MUNDO" en la ventana activa del escritorio
+    //arreglo de teclas para escribir "bOT COMMENT" en la ventana activa del escritorio
     final static int teclas[] = {
         KeyEvent.VK_B,
         KeyEvent.VK_O,
@@ -31,21 +31,21 @@ class BotComment {
         KeyEvent.VK_ENTER
     };
  
-    public static void main(String[] args) throws AWTException {
+    public void run() throws AWTException {
         //instanciamos la clase Robot
         Robot robot = new Robot();
  
         //esperamos 2 segundos antes de empezar a escribir
         robot.delay(6000);
-    for (int j = 0 ; j < 200 ; j++) {
+    for (int j = 0 ; j < 100 ; j++) {
         //iteramos a través del arreglo de teclas
         for (int i = 0 ; i < teclas.length ; i++) {
             //presionamos y soltamos cada tecla del array
             robot.keyPress(teclas[i]);
             robot.keyRelease(teclas[i]);
  
-            //dormimos el robot por 250 mili segundos luego de usar cada tecla
-            robot.delay(10);
+            //dormimos el robot por 5 mili segundos luego de usar cada tecla
+            robot.delay(5);
         }
     }
     }
